@@ -1,7 +1,12 @@
 <div>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <input type="text" placeholder="Username" formControlName="username" />
-    <input type="password" placeholder="Password" formControlName="password" />
-    <button [disabled]="!loginForm.valid">Login</button>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Username" formControlName="username" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="password" placeholder="Password" formControlName="password" />
+    </mat-form-field>
+    <br />
+    <button [disabled]="loginForm.valid" mat-raised-button color="primary">Login</button>
   </form>
 </div>
