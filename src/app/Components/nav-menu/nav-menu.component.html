@@ -1,1 +1,35 @@
-<p>nav-menu works!</p>
+<mat-drawer-container class="container" autosize>
+    <mat-drawer class="sidenav" #drawer>
+        <button color="primary" mat-button>Path1</button>
+        <button color="primary" mat-button>Path2</button>
+    </mat-drawer>
+    <div class="sidenav-content">
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <button mat-icon-button (click)="drawer.toggle()">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>Title</span>
+                <span class="spacer"></span>
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                        <mat-icon>publish</mat-icon>
+                        <span>Share</span>
+                    </button>
+                    <button mat-menu-item disabled>
+                        <mat-icon>comment</mat-icon>
+                        <span>Comment</span>
+                    </button>
+                    <button mat-menu-item>
+                        <mat-icon>delete</mat-icon>
+                        <span>Delete</span>
+                    </button>
+                </mat-menu>
+            </mat-toolbar-row>
+        </mat-toolbar>
+    </div>
+    <router-outlet></router-outlet>
+</mat-drawer-container>
