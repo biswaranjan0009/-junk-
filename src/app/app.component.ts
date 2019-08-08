@@ -10,7 +10,7 @@ import { User } from './_models/user';
 })
 export class AppComponent implements OnInit {
   currentUser: User;
-  title = 'App Login';
+  title = 'Application Login';
 
   constructor(private authenticationService: AuthenticationService,
     private router: Router) { }

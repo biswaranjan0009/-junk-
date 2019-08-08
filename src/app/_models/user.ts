@@ -6,3 +6,16 @@ export class User {
     lastName: string;
     token?: string;
 }
+
+export class UserRegistrationDetails {
+    profileFor: string;
+    fullName: string;
+    gender: string;
+    dob: Date;
+    email: string;
+    country: number;
+    mobile: string;
+    religion: number;
+    nativeLang: number;
+    password: string;
+}
