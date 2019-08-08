@@ -15,12 +15,14 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { JwtTokenInterceptor } from './_helpers/jwt-token.interceptor';
 import { ErrorInterceptor } from './_helpers/error.interceptor';
 import { fakeBackendProvider } from './_helpers/fake-backend.interceptor';
+import { NavMenuComponent } from './Components/nav-menu/nav-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    NavMenuComponent
   ],
   imports: [
     BrowserModule,
